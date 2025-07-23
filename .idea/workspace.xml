@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f01ed64-8ce1-4d71-8ba6-6536f62b814d" name="Changes" comment="" />
+    <list default="true" id="5f01ed64-8ce1-4d71-8ba6-6536f62b814d" name="Changes" comment="Day 1 Setup: Project structure, local DB with JSON, core entities, and service layer using Advanced Java&#10;&#10;- Created base package structure under `org.ticket.booking`&#10;- Added core entity classes: `User`, `Train`, and `Ticket`&#10;  - Defined user attributes including credentials and booking history&#10;  - Embedded train details inside ticket object including seat layout and station timings&#10;- Implemented JSON-based local DB using `users.json` and `trains.json`&#10;  - Mock data includes user bookings and train information&#10;- Integrated Jackson for JSON parsing and object mapping&#10;  - Deserialization of nested objects for complex booking structures&#10;- Built initial services: `UserBookingService` and `TrainService` for basic business logic&#10;- Structured the seat matrix and station timing logic for each train&#10;- Verified basic data flow from JSON to POJOs and service interaction&#10;&#10;&#10;Day-2&#10; Implement train booking system with user management&#10;Add user authentication with secure password hashing&#10;Implement train search and seat booking functionality&#10;Create JSON-based data persistence&#10;Add booking management features&#10;Include basic test setup">
+      <changelist_data name="Vinayak Bhardwaj" email="bhardwajvinayak64@gmail.com" automatic="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,36 +38,63 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Vinayak Bhardwaj &lt;bhardwajvinayak64@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ViNuCodeCrafter&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ViNuCodeCrafter/IRCTC-Backend&quot;,
+    &quot;accountId&quot;: &quot;7b26d7c1-9502-4110-9af3-329ab2d4e570&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="30EpnY376o9o7bXi4KEGayq3Uix" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/bhard/Desktop/IRCTC",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.IRCTC:app [:app:ticket.booking.App.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bhard/Desktop/IRCTC&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ticket.booking.entities" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -74,6 +104,23 @@
       <option name="presentableId" value="Default" />
       <updated>1753202754442</updated>
     </task>
+    <task id="LOCAL-00001" summary="Day 1 Setup: Project structure, local DB with JSON, core entities, and service layer using Advanced Java&#10;&#10;- Created base package structure under `org.ticket.booking`&#10;- Added core entity classes: `User`, `Train`, and `Ticket`&#10;  - Defined user attributes including credentials and booking history&#10;  - Embedded train details inside ticket object including seat layout and station timings&#10;- Implemented JSON-based local DB using `users.json` and `trains.json`&#10;  - Mock data includes user bookings and train information&#10;- Integrated Jackson for JSON parsing and object mapping&#10;  - Deserialization of nested objects for complex booking structures&#10;- Built initial services: `UserBookingService` and `TrainService` for basic business logic&#10;- Structured the seat matrix and station timing logic for each train&#10;- Verified basic data flow from JSON to POJOs and service interaction">
+      <option name="closed" value="true" />
+      <created>1753209552823</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1753209552823</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Day 1 Setup: Project structure, local DB with JSON, core entities, and service layer using Advanced Java&#10;&#10;- Created base package structure under `org.ticket.booking`&#10;- Added core entity classes: `User`, `Train`, and `Ticket`&#10;  - Defined user attributes including credentials and booking history&#10;  - Embedded train details inside ticket object including seat layout and station timings&#10;- Implemented JSON-based local DB using `users.json` and `trains.json`&#10;  - Mock data includes user bookings and train information&#10;- Integrated Jackson for JSON parsing and object mapping&#10;  - Deserialization of nested objects for complex booking structures&#10;- Built initial services: `UserBookingService` and `TrainService` for basic business logic&#10;- Structured the seat matrix and station timing logic for each train&#10;- Verified basic data flow from JSON to POJOs and service interaction&#10;&#10;&#10;Day-2&#10; Implement train booking system with user management&#10;Add user authentication with secure password hashing&#10;Implement train search and seat booking functionality&#10;Create JSON-based data persistence&#10;Add booking management features&#10;Include basic test setup">
+      <option name="closed" value="true" />
+      <created>1753296017732</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1753296017732</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -86,5 +133,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Day 1 Setup: Project structure, local DB with JSON, core entities, and service layer using Advanced Java&#10;&#10;- Created base package structure under `org.ticket.booking`&#10;- Added core entity classes: `User`, `Train`, and `Ticket`&#10;  - Defined user attributes including credentials and booking history&#10;  - Embedded train details inside ticket object including seat layout and station timings&#10;- Implemented JSON-based local DB using `users.json` and `trains.json`&#10;  - Mock data includes user bookings and train information&#10;- Integrated Jackson for JSON parsing and object mapping&#10;  - Deserialization of nested objects for complex booking structures&#10;- Built initial services: `UserBookingService` and `TrainService` for basic business logic&#10;- Structured the seat matrix and station timing logic for each train&#10;- Verified basic data flow from JSON to POJOs and service interaction" />
+    <MESSAGE value="Day 1 Setup: Project structure, local DB with JSON, core entities, and service layer using Advanced Java&#10;&#10;- Created base package structure under `org.ticket.booking`&#10;- Added core entity classes: `User`, `Train`, and `Ticket`&#10;  - Defined user attributes including credentials and booking history&#10;  - Embedded train details inside ticket object including seat layout and station timings&#10;- Implemented JSON-based local DB using `users.json` and `trains.json`&#10;  - Mock data includes user bookings and train information&#10;- Integrated Jackson for JSON parsing and object mapping&#10;  - Deserialization of nested objects for complex booking structures&#10;- Built initial services: `UserBookingService` and `TrainService` for basic business logic&#10;- Structured the seat matrix and station timing logic for each train&#10;- Verified basic data flow from JSON to POJOs and service interaction&#10;&#10;&#10;Day-2&#10; Implement train booking system with user management&#10;Add user authentication with secure password hashing&#10;Implement train search and seat booking functionality&#10;Create JSON-based data persistence&#10;Add booking management features&#10;Include basic test setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 1 Setup: Project structure, local DB with JSON, core entities, and service layer using Advanced Java&#10;&#10;- Created base package structure under `org.ticket.booking`&#10;- Added core entity classes: `User`, `Train`, and `Ticket`&#10;  - Defined user attributes including credentials and booking history&#10;  - Embedded train details inside ticket object including seat layout and station timings&#10;- Implemented JSON-based local DB using `users.json` and `trains.json`&#10;  - Mock data includes user bookings and train information&#10;- Integrated Jackson for JSON parsing and object mapping&#10;  - Deserialization of nested objects for complex booking structures&#10;- Built initial services: `UserBookingService` and `TrainService` for basic business logic&#10;- Structured the seat matrix and station timing logic for each train&#10;- Verified basic data flow from JSON to POJOs and service interaction&#10;&#10;&#10;Day-2&#10; Implement train booking system with user management&#10;Add user authentication with secure password hashing&#10;Implement train search and seat booking functionality&#10;Create JSON-based data persistence&#10;Add booking management features&#10;Include basic test setup" />
   </component>
 </project>
