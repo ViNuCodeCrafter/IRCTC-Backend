@@ -33,21 +33,18 @@ A Java-based backend system for train ticket booking and management, similar to 
 app/
 └── src/
     └── main/
-        └── java/
-            └── ticket/
-                └── booking/
-                    ├── entities/
-                    │   ├── Train.java
-                    │   ├── Ticket.java
-                    │   └── User.java
-                    ├── service/
-                    │   ├── TrainService.java
-                    │   └── UserBookingService.java
-                    ├── util/
-                    │   └── UserServiceUtil.java
-                    └── localDb/
-                        ├── trains.json
-                        └── users.json
+        ├── java/
+        │   └── ticket/
+        │       └── booking/
+        │           ├── entities/          # Java classes for Train, User, Ticket
+        │           ├── service/           # Business logic for train and user booking
+        │           ├── util/              # Utility classes like UserServiceUtil
+        │           └── Main.java          # Entry point of the application
+        └── resources/
+            └── localDb/                   # Local JSON data files
+                ├── trains.json
+                └── users.json
+
 
 
 ## Setup & Running
